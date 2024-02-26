@@ -61,6 +61,7 @@ class ToolTipWidget extends StatefulWidget {
   final TooltipPosition? tooltipPosition;
   final EdgeInsets? titlePadding;
   final EdgeInsets? descriptionPadding;
+  final Widget? tooltipActions;
   final TextDirection? titleTextDirection;
   final TextDirection? descriptionTextDirection;
 
@@ -71,6 +72,7 @@ class ToolTipWidget extends StatefulWidget {
     required this.screenSize,
     required this.title,
     required this.titleAlignment,
+    this.tooltipActions,
     required this.description,
     required this.titleTextStyle,
     required this.descTextStyle,
@@ -473,6 +475,7 @@ class _ToolTipWidgetState extends State<ToolTipWidget>
                                               ),
                                     ),
                                   ),
+                                  widget.tooltipActions ?? const SizedBox()
                                 ],
                               ),
                             ),

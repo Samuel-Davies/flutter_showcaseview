@@ -110,6 +110,8 @@ class Showcase extends StatefulWidget {
   /// Default to [Colors.black]
   final Color textColor;
 
+  final Widget? tooltipActions;
+
   /// If [enableAutoScroll] is sets to `true`, this widget will be shown above
   /// the overlay until the target widget is visible in the viewport.
   final Widget scrollLoadingWidget;
@@ -267,6 +269,7 @@ class Showcase extends StatefulWidget {
       valueColor: AlwaysStoppedAnimation(Colors.white),
     ),
     this.showArrow = true,
+    this.tooltipActions,
     this.onTargetClick,
     this.disposeOnTap,
     this.movingAnimationDuration = const Duration(milliseconds: 2000),
@@ -340,6 +343,7 @@ class Showcase extends StatefulWidget {
         disableScaleAnimation = null,
         title = null,
         description = null,
+        tooltipActions = null,
         titleAlignment = TextAlign.start,
         descriptionAlignment = TextAlign.start,
         titleTextStyle = null,
@@ -588,6 +592,7 @@ class _ShowcaseState extends State<Showcase> {
             position: position,
             offset: offset,
             screenSize: screenSize,
+            tooltipActions: widget.tooltipActions,
             title: widget.title,
             titleAlignment: widget.titleAlignment,
             description: widget.description,
