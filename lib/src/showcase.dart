@@ -668,9 +668,9 @@ class _TargetWidget extends StatelessWidget {
     return FractionalTranslation(
       translation: const Offset(-0.5, -0.5),
       child: GestureDetector(
-        onTap: onTap,
-        onLongPress: onLongPress,
-        onDoubleTap: onDoubleTap,
+        // onTap: onTap,
+        // onLongPress: onLongPress,
+        // onDoubleTap: onDoubleTap,
         child: Container(
           height: size!.height + 16,
           width: size!.width + 16,
