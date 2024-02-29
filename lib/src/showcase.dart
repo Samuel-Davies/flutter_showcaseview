@@ -578,15 +578,17 @@ class _ShowcaseState extends State<Showcase> {
         ),
         if (_isScrollRunning) Center(child: widget.scrollLoadingWidget),
         if (!_isScrollRunning) ...[
-          _TargetWidget(
-            offset: offset,
-            size: size,
-            onTap: _getOnTargetTap,
-            radius: widget.targetBorderRadius,
-            onDoubleTap: widget.onTargetDoubleTap,
-            onLongPress: widget.onTargetLongPress,
-            shapeBorder: widget.targetShapeBorder,
-            disableDefaultChildGestures: widget.disableDefaultTargetGestures,
+          IgnorePointer(
+            child: _TargetWidget(
+              offset: offset,
+              size: size,
+              onTap: _getOnTargetTap,
+              radius: widget.targetBorderRadius,
+              onDoubleTap: widget.onTargetDoubleTap,
+              onLongPress: widget.onTargetLongPress,
+              shapeBorder: widget.targetShapeBorder,
+              disableDefaultChildGestures: widget.disableDefaultTargetGestures,
+            ),
           ),
           ToolTipWidget(
             position: position,
