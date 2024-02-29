@@ -578,17 +578,15 @@ class _ShowcaseState extends State<Showcase> {
         ),
         if (_isScrollRunning) Center(child: widget.scrollLoadingWidget),
         if (!_isScrollRunning) ...[
-          IgnorePointer(
-            child: _TargetWidget(
-              offset: offset,
-              size: size,
-              onTap: _getOnTargetTap,
-              radius: widget.targetBorderRadius,
-              onDoubleTap: widget.onTargetDoubleTap,
-              onLongPress: widget.onTargetLongPress,
-              shapeBorder: widget.targetShapeBorder,
-              disableDefaultChildGestures: widget.disableDefaultTargetGestures,
-            ),
+          _TargetWidget(
+            offset: offset,
+            size: size,
+            onTap: _getOnTargetTap,
+            radius: widget.targetBorderRadius,
+            onDoubleTap: widget.onTargetDoubleTap,
+            onLongPress: widget.onTargetLongPress,
+            shapeBorder: widget.targetShapeBorder,
+            disableDefaultChildGestures: widget.disableDefaultTargetGestures,
           ),
           ToolTipWidget(
             position: position,
@@ -670,9 +668,9 @@ class _TargetWidget extends StatelessWidget {
     return FractionalTranslation(
       translation: const Offset(-0.5, -0.5),
       child: GestureDetector(
-        // onTap: onTap,
-        // onLongPress: onLongPress,
-        // onDoubleTap: onDoubleTap,
+        onTap: onTap,
+        onLongPress: onLongPress,
+        onDoubleTap: onDoubleTap,
         child: Container(
           height: size!.height + 16,
           width: size!.width + 16,
