@@ -130,7 +130,8 @@ class _ToolTipWidgetState extends State<ToolTipWidget>
     // ignore: deprecated_member_use
     final EdgeInsets viewInsets = EdgeInsets.fromWindowPadding(
       // ignore: deprecated_member_use
-      ambiguate(WidgetsBinding.instance)?.window.viewInsets ?? ViewPadding.zero,
+      ambiguate(WidgetsBinding.instance)?.window.viewInsets ??
+          WindowPadding.zero,
       // ignore: deprecated_member_use
       ambiguate(WidgetsBinding.instance)?.window.devicePixelRatio ?? 1,
     );

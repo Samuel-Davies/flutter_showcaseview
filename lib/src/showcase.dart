@@ -25,6 +25,7 @@ import 'dart:ui';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:showcaseview/src/tooltip_widget.dart';
 
 import 'enum.dart';
 import 'extension.dart';
@@ -32,7 +33,6 @@ import 'get_position.dart';
 import 'layout_overlays.dart';
 import 'shape_clipper.dart';
 import 'showcase_widget.dart';
-import 'tooltip_widget.dart';
 
 class Showcase extends StatefulWidget {
   /// A key that is unique across the entire app.
